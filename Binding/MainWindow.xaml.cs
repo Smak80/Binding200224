@@ -59,7 +59,7 @@ namespace Binding
         private void BtnSave_OnClick(object sender, RoutedEventArgs e)
         {
             std.Save("student.info");
-            std.Name = "44444";
+            std.Name = "5555";
             std.Password = "123456789";
         }
 
