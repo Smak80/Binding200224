@@ -1,0 +1,28 @@
+﻿<Window x:Class="Binding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Binding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <!--Window.Resources>
+        <local:Student x:Key="stud1" Id="1" Name="Иванов Иван" Salary="20000"/>
+    </Window.Resources-->
+    <StackPanel>
+        <TextBox x:Name="tb1" Height="30"/>
+        <TextBlock x:Name="lbl" Text="{Binding ElementName=tb1, Path=Text}"/>
+        <TextBox x:Name="tb2" Height="30"/>
+        <TextBlock x:Name="lbl2"/>
+        <Grid Height="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" x:Name="StdName" FontSize="48" />
+            <TextBox Grid.Column="1" x:Name="StdSalary" FontSize="48" />
+        </Grid>
+        <PasswordBox x:Name="StdPass" FontSize="48" PasswordChanged="StdPass_OnPasswordChanged"/>
+        <Button x:Name="BtnSave" Content="Сохранить" Click="BtnSave_OnClick"/>
+    </StackPanel>
+</Window>
